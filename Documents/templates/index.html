@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Notepad</title>
+</head>
+<body>
+    <form action="" method='POST'>
+        <input type="text" name="note" placeholder="Enter a note" required>
+        <button>Add Note</button>
+        
+    </form>
+    <ul>
+        {% for note in notes%}
+            <li>{{ note }}</li>
+        {% endfor %}
+        </ul>
+
+    
+</body>
+</html>
