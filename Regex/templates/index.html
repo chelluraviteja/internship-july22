@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Regex101</title>
+</head>
+<body>
+    <h1 REGEX101Clone</h1>
+      <form action="" method="post">
+          <label for="expression">Regex String :</label>
+          <input type="text" name="expression" id="expression">
+          <br>
+          <br>
+          <label for="find_string">Match String :</label>
+          <input type="text" name="find_string" id="find_string">
+          <br>
+          <br>
+          <button type="submit" class="button">Submit</button>
+      </form>
+    <ul>
+        {% for word in m %}
+            <h2>Match Found : {{word.group()}}</h2>
+        {%endfor%}
+    </ul>
+
+</body>
+</html>
