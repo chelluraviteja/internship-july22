@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to Ravi's URL Shortener {% endblock %}</h1>
+    <form method="post">
+    
+        <label for="url">URL</label>
+        <input type="text" name="url"
+               placeholder="URL to shorten" class="form-control"
+               value="{{ request.form['url'] }}" autofocus></input>
+               
+            <br>
+            <br>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    {% if short_url %}
+    <hr>
+    <span>{{ short_url }}</span>
+    {% endif %}
+{% endblock %}
