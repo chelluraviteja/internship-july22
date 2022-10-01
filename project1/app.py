@@ -7,10 +7,10 @@ import pickle
 # loading the data using the address from os
 
 import os
-filepath = "/Users/Ravi Teja/OneDrive/Desktop/project1/models/lr_model.pkl"
+filepath = "/Users/Ravi Teja/OneDrive/Desktop/project1/models/rfr_model.pkl"
 
 if os.path.exists(filepath):
-    file = open('/Users/Ravi Teja/OneDrive/Desktop/project1/models/lr_model.pkl', 'rb')
+    file = open('/Users/Ravi Teja/OneDrive/Desktop/project1/models/rfr_model.pkl', 'rb')
     codedata = pickle.load(file)
     file.close()
 else:
@@ -22,7 +22,7 @@ else:
 # dirname = os.path.dirname("__file__")
 # filename = os.path.join(dirname, "C:/Users/Ravi Teja/OneDrive/Desktop/project1/models/lr_model.pkl")
 
-# rfr_model = load(open(filename,'rb'))
+rfr_model = load(open(filepath,'rb'))
 
 # Define the prediction function
 def predict(carat, cut, color, clarity, depth, table, x, y, z):
